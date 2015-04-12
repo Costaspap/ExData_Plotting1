@@ -22,7 +22,7 @@ png("plot4.png",width=480,height=480)
 
 par(mfrow=c(2,2))
 
-plot(data$date,data$global_active_power,type="l",ylab="Global Active Power(kilowatts)",xlab="")
+plot(data$date,data$global_active_power,type="l",ylab="Global Active Power",xlab="")
 
 plot(data$date,data$voltage,type="l",ylab="Voltage",xlab="datetime")
 

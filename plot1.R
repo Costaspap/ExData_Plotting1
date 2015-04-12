@@ -5,6 +5,7 @@ if(!file.exists("household_power_consumption.txt")){
   file.remove("data")
 }
 
+Sys.setlocale("LC_TIME", "English")
 
 data = read.csv("household_power_consumption.txt",sep=";",na.strings="?",skip=66636,nrows=2880,stringsAsFactors=FALSE,
 col.names=c("date","time","global_active_power","global_reactive_power","voltage","global_intensity","sub_metering_1","sub_metering_2","sub_metering_3"))
@@ -19,6 +20,6 @@ data=data[,-2]
 
 png("plot1.png",width=480,height=480)
 
-hist(data$global_active_power,main="Global Active Power",xlab="Global Active Power(kilowatts)",col="red")
+hist(data$global_active_power,main="Global Active Power",xlab="Global Active Power (kilowatts)",col="red")
 
 dev.off()
